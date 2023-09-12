@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>DVD Details</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <!-- gLightbox gallery-->
+  <link rel="stylesheet" href="../vendor/glightbox/css/glightbox.min.css">
+  <!-- Range slider-->
+  <link rel="stylesheet" href="../vendor/nouislider/nouislider.min.css">
+  <!-- Choices CSS-->
+  <link rel="stylesheet" href="../vendor/choices.js/public/assets/styles/choices.min.css">
+  <!-- Swiper slider-->
+  <link rel="stylesheet" href="../vendor/swiper/swiper-bundle.min.css">
+  <!-- Google fonts-->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+  <!-- theme stylesheet-->
+  <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+  <!-- Custom stylesheet - for your changes-->
+  <link rel="stylesheet" href="../css/custom.css">
+  <!-- Favicon-->
+  <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+
+<body>
+  <div class="page-holder bg-light">
+    <!-- navbar-->
+    <header class="header bg-white">
+      <div class="container px-lg-3">
+        <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand" href="../"><span
+              class="fw-bold text-uppercase text-dark">SP DVD</span></a>
+          <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link active" href="/shop">Shop</a>
+              </li>
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link" href="/admin">Admin Tools</a>
+              </li>
+              <li class="nav-item">
+                <!-- Link--><a class="nav-link" href="/customer">Customer Tools</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="cart.html"> <i
+                    class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small
+                    class="text-gray fw-normal">(2)</small></a></li>
+              <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1"></i><small
+                    class="text-gray fw-normal"> (0)</small></a></li>
+              <li class="nav-item"><a class="nav-link" href="../login"> <i
+                    class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="py-5">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-6">
+            <!-- PRODUCT SLIDER-->
+            <div class="row m-sm-0">
+              <div class="col-sm-2 p-sm-0 order-2 order-sm-1 mt-2 mt-sm-0 px-xl-2">
+                <div class="swiper product-slider-thumbs">
+                  <div class="swiper-wrapper" id="photo1">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-10 order-1 order-sm-2">
+                <div class="swiper product-slider">
+                  <div class="swiper-wrapper" id="photo2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PRODUCT DETAILS-->
+          <div class="col-lg-6" id="filmDetail"></div>
+        </div>
+        <!-- DETAILS TABS-->
+        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+          <li class="nav-item"><a class="nav-link text-uppercase" id="reviews-tab" data-bs-toggle="tab" href="#reviews"
+              role="tab" aria-controls="reviews" aria-selected="true">Reviews</a></li>
+        </ul>
+        <div class="tab-pane fade show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+          <div class="p-4 p-lg-5 bg-white">
+            <div class="row" id="review_part"></div>
+          </div>
+        </div>
+      </div>
+  </div>
+  </footer>
+  <!-- JavaScript files-->
+  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../vendor/nouislider/nouislider.min.js"></script>
+  <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+  <script src="../js/front.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script>
+    const baseUrl = "http://localhost:3000";
+    const url = window.location.toString();
+    const filmID = parseInt(url.split("/").slice(-1)[0]);
+    axios.get(`${baseUrl}/film/${filmID}`)
+      .then((response) => {
+        const film_data = response.data[0][0];
+        const actor_data = response.data[1];
+        var detailHtml = `
+            <h1>${film_data.title} (${film_data.release_year})</h1>
+            <p class="text-muted lead">$${film_data.rental_rate}</p>
+            <p class="text-sm mb-4">${film_data.description}</p>
+            <div class="row align-items-stretch mb-4">
+              <div class="col-sm-3 pl-sm-0"><a
+                  class="btn btn-dark btn-sm btn-block h-100 d-flex align-items-center justify-content-center px-0"
+                  href="cart.html">Add to cart</a></div>
+            </div><a class="text-dark p-0 mb-4 d-inline-block" href="#!"><i class="far fa-heart me-2"></i>Add to wish
+              list</a><br>
+            <ul class="list-unstyled small d-inline-block">
+              <li class="px-3 py-2 mb-1 bg-white"><strong class="text-uppercase">RATING:</strong><span
+                  class="ms-2 text-muted">${film_data.rating}</span></li>
+              <li class="px-3 py-2 mb-1 bg-white text-muted"><strong
+                  class="text-uppercase text-dark">Category:</strong><a class="reset-anchor ms-2" href="#!">${film_data.name}</a></li>
+            </ul>  
+            <h5 class="text-uppercase mb-2">Actors</h5>
+            <p>
+            `
+        for (var i = 0; i < actor_data.length; i++) {
+          if (i < (actor_data.length - 1)) {
+            detailHtml += `${actor_data[i].first_name} ${actor_data[i].last_name}, `
+          }
+          else {
+            detailHtml += `${actor_data[i].first_name} ${actor_data[i].last_name}`
+          }
+        }
+        detailHtml += `</p>`
+        $('#filmDetail').append(detailHtml)
+        $('#photo1').append(`
+        <div class="swiper-slide h-auto swiper-thumb-item mb-3"><img class="w-100" src="../img/${film_data.img}" alt="..."></div>
+        `)
+        $('#photo2').append(`
+        <div class="swiper-slide h-auto"><a class="glightbox product-view" href="img/${film_data.img}"
+                        data-gallery="gallery2" data-glightbox="Product item 1"><img class="img-fluid"
+                          src="../img/${film_data.img}" alt="..."></a></div>
+        `)
+      });
+
+    axios.get(`${baseUrl}/review/${filmID}`)
+      .then((response) => {
+        const reviews = response.data
+        const starHtml = `<li class="list-inline-item m-0"><i class="fas fa-star text-warning"></i></li>`
+        reviews.forEach((review) => {
+          $('#review_part').append(`
+          <div class="col-lg-8">
+            <div class="d-flex mb-3">
+              <div class="ms-3 flex-shrink-1">
+                <h6 class="mb-0 text-uppercase">${review.first_name} ${review.last_name}</h6>
+                <p class="small text-muted mb-0 text-uppercase">${review.last_update}</p>
+                <ul class="list-inline mb-1 text-xs">
+                  ${starHtml.repeat(review.rating)}
+                </ul>
+                <p class="text-sm mb-0 text-muted">${review.description}</p>
+              </div>
+            </div>
+          </div>
+          `)
+        })
+      });
+  </script>
+  <script>
+    // ------------------------------------------------------- //
+    //   Inject SVG Sprite - 
+    //   see more here 
+    //   https://css-tricks.com/ajaxing-svg-sprite/
+    // ------------------------------------------------------ //
+    function injectSvgSprite(path) {
+
+      var ajax = new XMLHttpRequest();
+      ajax.open("GET", path, true);
+      ajax.send();
+      ajax.onload = function (e) {
+        var div = document.createElement("div");
+        div.className = 'd-none';
+        div.innerHTML = ajax.responseText;
+        document.body.insertBefore(div, document.body.childNodes[0]);
+      }
+    }
+    // this is set to BootstrapTemple website as you cannot 
+    // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+    // while using file:// protocol
+    // pls don't forget to change to your domain :)
+    injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+  </script>
+  <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  </div>
+</body>
+
+</html>

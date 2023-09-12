@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- gLightbox gallery-->
+    <link rel="stylesheet" href="../vendor/glightbox/css/glightbox.min.css">
+    <!-- Range slider-->
+    <link rel="stylesheet" href="../vendor/nouislider/nouislider.min.css">
+    <!-- Choices CSS-->
+    <link rel="stylesheet" href="../vendor/choices.js/public/assets/styles/choices.min.css">
+    <!-- Swiper slider-->
+    <link rel="stylesheet" href="../vendor/swiper/swiper-bundle.min.css">
+    <!-- Google fonts-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;700&amp;display=swap">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Martel+Sans:wght@300;400;800&amp;display=swap">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="../css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="../css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="../img/favicon.png">
+</head>
+
+<body>
+    <header class="header bg-white">
+        <div class="container px-lg-3">
+            <nav class="navbar navbar-expand-lg navbar-light py-3 px-lg-0"><a class="navbar-brand"
+                    href="../"><span class="fw-bold text-uppercase text-dark">SP DVD</span></a>
+                <button class="navbar-toggler navbar-toggler-end" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <!-- Link--><a class="nav-link" href="/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link--><a class="nav-link" href="/shop">Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link--><a class="nav-link" href="/admin">Admin Tools</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Link--><a class="nav-link" href="/customer">Customer Tools</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="cart.html"> <i
+                                    class="fas fa-dolly-flatbed me-1 text-gray"></i>Cart<small
+                                    class="text-gray fw-normal">(2)</small></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#!"> <i class="far fa-heart me-1"></i><small
+                                    class="text-gray fw-normal"> (0)</small></a></li>
+                        <li class="nav-item"><a class="nav-link active" href="login.html"> <i
+                                    class="fas fa-user me-1 text-gray fw-normal"></i>Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- DETAILS TABS-->
+    <div class="container pt-5">
+        <ul class="nav nav-tabs border-0" id="myTab" role="tablist">
+            <li class="nav-item"><a class="nav-link text-uppercase active" id="customer-tab" data-bs-toggle="tab"
+                    href="#customer-form" role="tab" aria-controls="description" aria-selected="true">I am a customer</a></li>
+            <li class="nav-item"><a class="nav-link text-uppercase" id="staff-tab" data-bs-toggle="tab" href="#reviews"
+                    role="tab" aria-controls="reviews" aria-selected="false">I am a staff</a></li>
+        </ul>
+    </div>
+    <div class="tab-content mb-5" id="myTabContent">
+        <div class="tab-pane fade show active" id="customer-form" role="tabpanel" aria-labelledby="customer-tab">
+            <div class="container pt-5">
+                <h1 class="pb-3">Customer Login</h1>
+                <form id="login-form-customer">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="text" class="form-control" id="cust_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="cust_password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                </form>
+                <h3 class="pb-3 pt-3">Don't have an account?</h3>
+                <a href="/register/" class="btn btn-primary btn-lg">Register</a>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="staff-tab">
+            <div class="container pt-5">
+                <h1 class="pb-3">Staff Login</h1>
+                <form id="login-form-staff">
+                    <div class="form-group-staff">
+                        <label for="email">Email Address</label>
+                        <input type="text" class="form-control" id="staff_email">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="staff_password">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- JavaScript files-->
+    <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../vendor/nouislider/nouislider.min.js"></script>
+    <script src="../vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="../js/front.js"></script>
+    <script>
+        // ------------------------------------------------------- //
+        //   Inject SVG Sprite - 
+        //   see more here 
+        //   https://css-tricks.com/ajaxing-svg-sprite/
+        // ------------------------------------------------------ //
+        function injectSvgSprite(path) {
+
+            var ajax = new XMLHttpRequest();
+            ajax.open("GET", path, true);
+            ajax.send();
+            ajax.onload = function (e) {
+                var div = document.createElement("div");
+                div.className = 'd-none';
+                div.innerHTML = ajax.responseText;
+                document.body.insertBefore(div, document.body.childNodes[0]);
+            }
+        }
+        // this is set to BootstrapTemple website as you cannot 
+        // inject local SVG sprite (using only 'icons/orion-svg-sprite.svg' path)
+        // while using file:// protocol
+        // pls don't forget to change to your domain :)
+        injectSvgSprite('https://bootstraptemple.com/files/icons/orion-svg-sprite.svg');
+
+    </script>
+    <!-- FontAwesome CSS - loading as last, so it doesn't block rendering-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <script>
+        const baseUrl = "http://localhost:3000";
+        $("#login-form-customer").submit((event) => {
+            // prevent page reload
+            event.preventDefault();
+            const email = $("#cust_email").val();
+            const password = $("#cust_password").val();
+            const requestBody = {
+                email: email,
+                password: password
+            };
+            axios.post(`${baseUrl}/customer_login/`, requestBody)
+                .then((response) => {
+                    const token = response.data.token;
+                    const loggedInCustomerID = response.data.user_id;
+                    localStorage.clear()
+                    localStorage.setItem("token", token);
+                    localStorage.setItem("loggedInCustomerID", loggedInCustomerID);
+                    window.location.href = "/customer";
+                })
+                .catch((error) => {
+                    console.log(error);
+                    window.alert('The email or password is incorrect')
+                });
+        });
+
+        $("#login-form-staff").submit((event) => {
+            // prevent page reload
+            event.preventDefault();
+            const email = $("#staff_email").val();
+            const password = $("#staff_password").val();
+            const requestBody = {
+                email: email,
+                password: password
+            };
+            axios.post(`${baseUrl}/login/`, requestBody)
+                .then((response) => {
+                    const token = response.data.token;
+                    const loggedInAdminID = response.data.user_id;
+                    localStorage.clear()
+                    localStorage.setItem("token", token);
+                    localStorage.setItem("loggedInAdminID", loggedInAdminID);
+                    window.location.href = "/admin";
+                })
+                .catch((error) => {
+                    console.log(error);
+                    window.alert('The email or password is incorrect')
+                });
+        });
+    </script>
+</body>
+
+</html>
